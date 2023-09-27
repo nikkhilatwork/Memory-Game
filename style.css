@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: skyblue;
+    display: flex;
+    justify-self:center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4,8rem);
+    grid-template-rows: repeat(4,8rem);
+    grid-gap: 2rem;
+    perspective: 800px;
+}
+
+.face, .back{
+    width: 100%;
+    position: absolute;
+    pointer-events:none;
+    height: 100%;
+}
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    
+}
+
+.back{
+    background-color: white;
+    backface-visibility: hidden;
+}
+.toggleCard{
+    transform: rotateY(180deg);
+}
